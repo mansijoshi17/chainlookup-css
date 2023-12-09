@@ -92,3 +92,11 @@ ul.MuiList-root.MuiList-padding.css-1mcnwpj-MuiList-root{
     margin: 0 auto;
     margin-top: 50px;
 }
+
+canvas.pricechart {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 800px;
+}

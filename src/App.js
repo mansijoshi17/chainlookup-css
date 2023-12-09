@@ -7,6 +7,7 @@ import nftabi from "./abi/nftContract.json";
 import marketabi from "./abi/market.json";
 import { useState } from "react";
 import Analytics from "./components/Analytics";
+import { PriceChart } from "./components/PriceChart";
 
 function App() {
   const [transfers, setTransfers] = useState([]);
@@ -76,6 +77,7 @@ function App() {
         </a>
       </form>
       <Analytics transfers={transfers} />
+      <PriceChart prices={prices} />
     </div>
   );
 }

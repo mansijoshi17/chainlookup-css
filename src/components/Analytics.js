@@ -7,9 +7,9 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import redFlag from "../assets/redflag.png";
+import { shortAddress } from "../config";
 
 export default function Analytics({ transfers }) {
-  console.log(transfers, "transfers");
   return (
     <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
       {transfers.length > 0 && (
@@ -22,7 +22,7 @@ export default function Analytics({ transfers }) {
                     <Avatar src={redFlag} />
                   </ListItemAvatar>
                   <ListItemText
-                    primary={`From - ${transfer.from}`}
+                    primary={`From - ${shortAddress(transfer.from)}`}
                     secondary={
                       <React.Fragment>
                         <Typography
@@ -33,7 +33,7 @@ export default function Analytics({ transfers }) {
                         >
                           To
                         </Typography>
-                        {`- ${transfer.to}`}
+                        {`- ${shortAddress(transfer.to)}`}
                       </React.Fragment>
                     }
                   />
