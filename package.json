@@ -20,6 +20,7 @@
     "ethers": "^6.9.0",
     "https-browserify": "^1.0.0",
     "install": "^0.13.0",
+    "next-tick": "^1.1.0",
     "npm": "^10.2.5",
     "os-browserify": "^0.3.0",
     "path": "^0.12.7",
