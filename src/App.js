@@ -67,6 +67,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Wash Trading Detection</h1>
       <form class="search-container">
         <input type="text" id="search-bar" placeholder="Search by Address" />
         <a href="#" onClick={detection}>
