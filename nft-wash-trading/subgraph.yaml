@@ -1,0 +1,24 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Contract
+    network: matic
+    source:
+      address: "0x14DC8a26a64c6CC7a205FC2B4bB258C7367d3829"
+      abi: Contract
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - MarketItemCreated
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: MarketItemCreated(indexed uint256,indexed address,indexed uint256,address,address,uint256)
+          handler: handleMarketItemCreated
+      file: ./src/contract.ts
