@@ -11,7 +11,16 @@ import { shortAddress } from "../config";
 
 export default function Analytics({ transfers }) {
   return (
-    <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
+    <List
+      sx={{
+        width: "100%",
+        maxWidth: 360,
+        bgcolor: "background.paper",
+        display: "block",
+        margin: "0 auto",
+        marginTop: "50px",
+      }}
+    >
       {transfers.length > 0 && (
         <>
           {transfers.map((transfer) => {
