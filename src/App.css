@@ -85,3 +85,10 @@ input#search-bar{
 }
 
 
+
+ul.MuiList-root.MuiList-padding.css-1mcnwpj-MuiList-root{
+
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+}
