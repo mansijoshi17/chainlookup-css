@@ -23,7 +23,7 @@ function App() {
 
     const contract = new web3.eth.Contract(nftabi, nftContract);
     const latestBlock = await web3.eth.getBlockNumber();
-    const target = Number(latestBlock) - 10000;
+    const target = Number(latestBlock) - 40000;
 
     try {
       // Fetch Transfer events for the given token ID
@@ -37,6 +37,7 @@ function App() {
       let trans = [];
       // Iterate through the events and log details
       for (let event of events) {
+        
         trans.push(event.returnValues);
       }
       setTransfers(trans);
